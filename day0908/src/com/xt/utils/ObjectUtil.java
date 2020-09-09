@@ -5,7 +5,10 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Map;
 import java.util.Properties;
+
+import com.xt.utils.exception.PropertyNotFoundException;
 
 /**
  * 产生对象：通过配置文件，格式如下
@@ -130,5 +133,60 @@ public class ObjectUtil
         catch(Exception ex) {
             return getField(clz.getSuperclass(),fieldName);
         }
+    }
+    
+    /**
+     * 给对象（第一个参数）设置属性
+     * 第二个参数，其中key为属性名，value为属性值
+     * @param object
+     */
+    public static void setProperties(Object object,
+        Map<String,Object> values) {
+        Class<?> clz=object.getClass();
+        for(Map.Entry<String, Object> entry:values.entrySet()) {
+            String setter=entry.getKey();
+            setter="set"+setter.substring(0,1).toUpperCase()+setter.substring(1);
+            Method mth=null;
+            try {
+                mth=clz.getMethod(setter, entry.getValue().getClass());
+                mth.invoke(object, entry.getValue());
+            }catch(Exception ex) {
+                
+            }
+        }
+    }
+    
+    /**
+     * 获取指定对象（第一个参数）指定属性的值（第二个参数），
+     * 如果无此属性，则抛出自定义异常PropertyNotFoundException
+     * @param object
+     * @param prop
+     * @return
+     * @throws PropertyNotFoundException
+     */
+    public static Object getPropertyValue(Object object,String prop) throws PropertyNotFoundException{
+        String getter="get"+prop.substring(0,1).toUpperCase()+prop.substring(1);
+        Class<?> clz=object.getClass();
+        Method mth=null;
+        try {
+            mth=clz.getMethod(getter);
+        }
+        catch(Exception ex) {
+            getter="is"+prop.substring(0,1).toUpperCase()+prop.substring(1);
+            try {
+                mth=clz.getMethod(getter);
+            }
+            catch(Exception e) {}
+        }
+        if(mth==null) {
+            throw new PropertyNotFoundException(prop);
+        }
+        try {
+            return mth.invoke(object);
+        }
+        catch(Exception ex) {
+            throw new PropertyNotFoundException(prop);
+        }
+        
     }
 }
