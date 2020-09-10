@@ -1,0 +1,8 @@
+reg执行前，参数是：[admin, mike@qqq.com, 11111]
+reg执行后，返回值是：0
+login执行前，参数是：[admin, 123456]
+login执行后，返回值是：1
+add执行前，参数是：[  , dd, 11.0]
+add执行后，返回值是：0
+delete执行前，参数是：[122]
+delete执行后，返回值是：1
