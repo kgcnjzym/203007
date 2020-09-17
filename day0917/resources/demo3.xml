@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE students SYSTEM "stu.dtd" >
+<students>
+  <student id="_001" class="A">
+    <name>name</name>
+    <gender>gender</gender>
+    <age>age</age>
+  </student>
+</students>

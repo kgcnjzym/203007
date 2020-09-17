@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT students (student+)>
+<!ELEMENT student (name,age,gender)|(name,gender,age)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT gender (#PCDATA)>
+<!-- attribute list-->
+<!ATTLIST student 
+	id ID #REQUIRED
+	class (A|B) #IMPLIED
+>

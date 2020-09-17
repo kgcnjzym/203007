@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+	<student id="s&gt;001">
+		<name>mike</name>
+		<age>20</age>
+		<gender>Male</gender>
+		<score>90</score>
+	</student>
+	<!-- 使用实体字符表示特殊符号： &字符名; -->
+	<!-- &amp; &  &quot;  &apos;-->
+	<student id="s&lt;002">
+		<name>jerry</name>
+		<age>21</age>
+		<gender>
+		<!-- 文本中可以使用CDATA包含多个特殊符号 -->
+		<![CDATA[dfsd<<<<>>>&&&"'fsdfds]]>
+		</gender>
+		<score/>
+	</student>
+</students>
