@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="NEWSPAPER" type="newsType"/>
+	<xs:element name="ARTICLE" type="artType"/>	
+	
+	<xs:complexType name="newsType">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element ref="ARTICLE"/>
+		</xs:choice>
+	</xs:complexType>
+	
+	<xs:complexType name="artType">
+		<xs:sequence>
+			<xs:element name="HEADLINE" type="xs:string"/>
+			<xs:element name="BYLINE" type="xs:string"/>
+			<xs:element name="LEAD" type="xs:string"/>
+			<xs:element name="BODY" type="xs:string"/>
+			<xs:element name="NOTES" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="AUTHOR" type="xs:string" use="required"/>
+		<xs:attribute name="EDITOR" type="xs:string" use="optional"/>
+		<xs:attribute name="DATE" type="xs:date"/>
+		<xs:attribute name="EDITION" type="xs:string"/>		
+	</xs:complexType>
+</xs:schema>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 复杂类型：choice ,不限制次数，不限制顺序-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="root">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="suba" />
+				<xs:element ref="subb" />
+				<xs:element ref="subc" />
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="suba" type="xs:string"/>
+	<xs:element name="subb" type="xs:string"/>
+	<xs:element name="subc" type="xs:string"/>
+</xs:schema>

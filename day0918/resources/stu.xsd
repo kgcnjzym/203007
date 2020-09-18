@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="学生名册" type="stuListType"/>
+	<xs:element name="学生" type="stuType"/>
+	
+	<xs:complexType name="stuListType">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element ref="学生"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="stuType">
+		<xs:sequence>
+			<xs:element name="姓名" type="xs:string"/>
+			<xs:element name="性别" type="genderType"/>
+			<xs:element name="年龄" type="ageType"/>
+		</xs:sequence>
+		<xs:attribute name="学号" type="xs:positiveInteger"/>
+	</xs:complexType>
+	
+	<xs:simpleType name="genderType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="男"/>
+			<xs:enumeration value="女"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="ageType">
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="16"/>
+			<xs:maxInclusive value="40"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
+
+
+
+
+
+
+
+
+

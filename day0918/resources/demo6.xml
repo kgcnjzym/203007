@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="demo6.xsd" >
+	<suba>dsfsd</suba>
+	<subc>dsfsd</subc>
+	<suba>ddd</suba>
+	<subb>dsfsd</subb>
+	<subc>dsfsd</subc>
+</root>
