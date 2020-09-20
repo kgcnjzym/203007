@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<purchaseOrder orderDate="2020-09-18">
+  <shipTo country="中国">
+    <name>张三</name>
+    <street>建宁路</street>
+    <city>南京</city>
+    <state>江苏</state>
+    <zip>210000</zip>
+  </shipTo>
+  <billTo country="中国">
+    <name>李四</name>
+    <street>上海路</street>
+    <city>南京</city>
+    <state>江苏</state>
+    <zip>210001</zip>
+  </billTo>
+  <comment>这是一个重要订单</comment>
+  <items>
+    <item partNum="123-AD">
+      <productName>计算机</productName>
+      <quantity>9</quantity>
+      <USPrice>2999.9</USPrice>
+      <comment>贵重商品，小心运输</comment>
+      <shipDate>2020-09-20</shipDate>
+    </item>
+    <item partNum="124-AE">
+      <productName>路由器</productName>
+      <quantity>12</quantity>
+      <USPrice>88.9</USPrice>
+    </item>
+  </items>
+</purchaseOrder>

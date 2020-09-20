@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PhoneInfo>
+    <Brand name="华为">
+        <Type name="U8650"/>
+        <Type name="HW123"/>
+        <Type name="HW321"/>
+    </Brand>
+    <Brand name="苹果">
+        <Type name="iPhone4"/>
+    </Brand>
+</PhoneInfo>
