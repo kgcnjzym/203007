@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packages>
+	<package>
+		<name>网虫套餐</name>
+		<talk>20</talk>
+		<net>1000</net>
+		<sms>0</sms>
+		<price>48</price>
+		<talkOver>0.15</talkOver>
+		<netOver>0.20</netOver>
+		<smsOver>0.10</smsOver>
+	</package>
+	<package>
+		<name>话痨套餐</name>
+		<talk>500</talk>
+		<net>100</net>
+		<sms>10</sms>
+		<price>58</price>
+		<talkOver>0.15</talkOver>
+		<netOver>0.20</netOver>
+		<smsOver>0.10</smsOver>
+	</package>
+	<package>
+		<name>大王套餐</name>
+		<talk>500</talk>
+		<net>1000</net>
+		<sms>100</sms>
+		<price>88</price>
+		<talkOver>0.15</talkOver>
+		<netOver>0.20</netOver>
+		<smsOver>0.10</smsOver>
+	</package>
+</packages>

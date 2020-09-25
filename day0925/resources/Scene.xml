@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenes>
+	<scene>
+		<type>net</type>
+		<desc>和女友微信视频聊天,使用流量%d%s.</desc>
+		<number>200</number>
+		<unit>兆</unit>
+	</scene>
+	<scene>
+		<type>talk</type>
+		<desc>问候客户,谁知其如此难缠,通话%d%s.</desc>
+		<number>300</number>
+		<unit>分钟</unit>
+	</scene>
+	<scene>
+		<type>sms</type>
+		<desc>参与环境保护实施方案问卷调查,发送短信%d%s.</desc>
+		<number>3</number>
+		<unit>条</unit>
+	</scene>
+	<scene>
+		<type>sms</type>
+		<desc>通知朋友手机换号,发送短信%d%s.</desc>
+		<number>20</number>
+		<unit>条</unit>
+	</scene>
+</scenes>
