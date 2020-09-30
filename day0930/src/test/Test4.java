@@ -12,7 +12,7 @@ public class Test4
 {
     public static void main(String[] args)
     {
-        File file=new File("/Users/yangweibing/kgc_demo/203007/works/day0930/src/com/xt/dao");
+        File file=new File("/Users/yangweibing/kgc_demo/203007/works/day0905/src/com/xt/entity");
         if(!file.exists()) {
             System.out.println("not exists");
             return;
@@ -29,18 +29,18 @@ public class Test4
 //                return pathname.isFile() && pathname.getName().endsWith(".java");
 //            }
 //        });
-        //JDK8使用声明式接口
+        //JDK8使用声明式接口实现文件过滤
         File []fs=file.listFiles(
             pn->pn.isFile() && pn.getName().endsWith(".java"));
         for (int i = 0; i < fs.length; i++)
         {
             System.out.println(fs[i].getName());
         }
+        //JDK8使用声明式接口实现多线程
         new Thread(()->{
             System.out.println("this is thread");
             System.out.println("name:"+Thread.currentThread().getName());
         },"myth").start();
-        
     }
     
 }
