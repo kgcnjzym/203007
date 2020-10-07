@@ -30,6 +30,7 @@ public class Test4
 //            }
 //        });
         //JDK8使用声明式接口实现文件过滤
+        String str="test";
         File []fs=file.listFiles(
             pn->pn.isFile() && pn.getName().endsWith(".java"));
         for (int i = 0; i < fs.length; i++)
@@ -38,9 +39,10 @@ public class Test4
         }
         //JDK8使用声明式接口实现多线程
         new Thread(()->{
-            System.out.println("this is thread");
+            System.out.println(str+":"+"this is thread");
             System.out.println("name:"+Thread.currentThread().getName());
         },"myth").start();
+//        str="other";
     }
     
 }
