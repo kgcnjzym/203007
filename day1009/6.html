@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>更多表单元素示例</title>
+</head>
+
+<body>
+    <form>
+    	<p>
+			<label for="t1">只读：</label>
+			<input name="ro" id="t1" readonly value="asdasd">
+		</p>
+		<p>
+			<label for="t2">禁用：</label>
+			<input name="da" id="t2" disabled value="sdasd">
+		</p>
+		<p>
+			<label for="t3">Name：</label>
+			<input name="txt" id="t3" maxlength="10" size="20">
+		</p>
+        <p>
+            <label for="s1">城市：</label>
+            <select name="city" id="s1">
+                <optgroup label="华东">
+                    <option value="nj">南京</option>
+                    <option value="sh">上海</option>
+                    <option value="wx" selected>无锡</option>
+                </optgroup>
+                <optgroup label="华北">
+                    <option value="bj">北京</option>
+                    <option value="tj">天津</option>
+                    <option value="sjz">石家庄</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="s2">城市：</label>
+            <select name="city2" id="s2" multiple size="6">
+                    <option value="nj">南京</option>
+                    <option value="sh">上海</option>
+                    <option value="wx">无锡</option>
+                    <option value="bj">北京</option>
+                    <option value="tj">天津</option>
+                    <option value="sjz">石家庄</option>
+            </select>
+        </p>
+        <p>
+        	<!-- <label for="t1">简介：</label>
+        	<textarea name="intro" id="t1" cols="30" rows="10"></textarea> -->
+        	<fieldset>
+        		<legend>简介：</legend>
+        		<textarea name="intro" id="t1" cols="30" rows="10"></textarea>
+        	</fieldset>
+        </p>
+        <p>
+            <!-- <input type="submit" value="提交"> -->
+            <button>提交</button>
+            <button type="reset">重置</button>
+            <button type="button">无用按钮</button>
+        </p>
+    </form>
+</body>
+
+</html>
