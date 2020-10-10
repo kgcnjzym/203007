@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>H5表单示例</title>
+</head>
+<body>
+	<input type="text" name="out" form="f1">
+	<form action="index.html" id="f1" >
+		<p>
+			<label for="t1">姓名：</label>
+			<input name="name" id="t1" autocomplete="off"
+			autofocus placeholder="请输入姓名" required
+			pattern="[a-zA-Z]{3,16}">
+		</p>
+		<p>
+			<label for="t2">*Email：</label>
+			<input type="email" name="email" id="t2" required>
+		</p>
+		<p>
+			<label for="t3">Age：</label>
+			<input type="number" name="age" id="t3"
+			min="16" max="40" >
+		</p>
+		<p>
+			<label for="t4">主页：</label>
+			<input type="url" name="homepage" id="t4">
+		</p>
+		<p>
+			<label for="t5">电话：</label>
+			<input type="tel" name="phone" id="t5">
+		</p>
+		<p>
+			<label for="t6">生日：</label>
+			<input type="date" name="birth" id="t6">
+		</p>
+		<p>
+			<label for="t7">搜索：</label>
+			<input type="search" name="key" id="t7">
+		</p>
+		<p>
+			<label for="t8">爱好：</label>
+			<input type="text" name="hobby" id="t8" list="dl">
+			<datalist id="dl">
+				<option value="A">opt1</option>
+				<option value="B">opt2</option>
+				<option value="C">opt3</option>
+				<option value="D">opt4</option>
+			</datalist>
+		</p>
+		<p>
+			<button>GET提交</button>
+			<button formmethod="post">POST提交</button>
+			<button type="reset">重置</button>
+		</p>
+
+	</form>
+</body>
+</html>
