@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>伪元素选择器</title>
+	<style>	
+		h2:first-child{
+			color: red;
+		}
+		p:first-child{
+			color: red;
+		}
+		p::first-letter{
+			color: blue;
+		}
+		div::first-line{
+			color: red;
+		}
+		h1::after{
+			content: "append";
+			color: red;
+		}
+		h1::before{
+			content: "prefix";
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<h1>this is h1</h1>
+	<div>
+		<p>Line 1</p>
+		<h2>Line 2</h2>
+		<p>Line 3</p>
+		<h2>Line 4</h2>
+		<p>Line 5</p>
+	</div>
+	<div>
+		first line<br>
+		second line
+	</div>
+</body>
+</html>
+
+
+
+
+
+

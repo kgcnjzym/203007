@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>基础选择器及其优先级</title>
+	<style>		
+		/* 标签选择器*/
+		h1{color:red}
+		/* 类选择器*/
+		.blue{color:blue!important;}
+		/* ID选择器*/
+		#p1{color:green;}
+	</style>
+</head>
+<body>
+	<h1>this is h1</h1>
+	<h2 class="blue">this is h2</h2>
+	<h3 class="blue">this is h3</h3>
+	<p>this is first</p>
+	<p id="p1">this is second</p>
+	<p id="p1">this is third</p>
+	<!-- 页面加载样式顺序：标签、类、ID、行内 -->
+	<!-- 选择器优先级：正好相反 -->
+	<!-- !important不会被覆盖 -->
+	<h1 class="blue" id="p1" style="color:skyblue">this is test h1</h1>
+</body>
+</html>
+
+
+
+
+
+
