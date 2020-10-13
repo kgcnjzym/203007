@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>浮动定位</title>
+	<style>
+		div{
+			width: 200px;height: 50px;
+			border: 1px solid red;
+			float: right;
+		}
+		section{
+			border: 1px solid blue;
+		}
+		section::after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<div>d1</div>
+		<div>d2</div>
+		<div>d3</div>
+		<div>d4</div>
+	</section>
+	<p>line1</p>
+	<p>line2</p>
+	<p>line3</p>
+	<p>line4</p>
+	<p>line5</p>
+	<p>line6</p>
+	<p>line7</p>
+	<p>line8</p>
+	<p>line9</p>
+	<p>line10</p>
+	<p>line11</p>
+	<p>line12</p>
+	<p>line13</p>
+	<p>line14</p>
+	<p>line15</p>
+	<p>line16</p>
+	<p>line17</p>
+	<p>line18</p>
+	<p>line19</p>
+	<p>line20</p>
+	
+</body>
+</html>

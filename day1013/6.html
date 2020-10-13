@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>定位方式</title>
+	<style>
+		div{width: 200px;height: 100px;border:1px;}
+		.d1{background-color:red;}
+		.d2{background-color:green; position: absolute;}
+		.d3{background-color:blue; width: 250px; height: 150px;}
+		.d4{background-color:skyblue; position: relative;
+			top:-10px;left:20px;}
+		.top{
+			width: 60px;height: 60px;
+			line-height: 60px;
+			background-color: #000;
+			font-weight: bold;
+			text-align: center;
+			position: fixed;
+			bottom: 0; right: 0
+		}
+		.top a{color:#fff;}
+		article{
+			width: 400px;border: 1px solid blue;
+			position: relative;
+		}
+		section{width: 200px;border:1px green solid;}
+		.s1{
+			position: absolute;
+			left:50px; top: 30px;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="d1" id="d1"></div>
+	<div class="d2"></div>
+	<div class="d3"></div>
+	<div class="d4"></div>
+	<div class="d1"></div>
+	<div class="top"><a href="#d1">TOP</a></div>
+	<p>line1</p>
+	<p>line2</p>
+	<p>line3</p>
+	<p>line4</p>
+	<p>line5</p>
+	<p>line6</p>
+	<p>line7</p>
+	<p>line8</p>
+	<p>line9</p>
+	<p>line10</p>
+	<p>line11</p>
+	<p>line12</p>
+	<p>line13</p>
+	<p>line14</p>
+	<p>line15</p>
+	<p>line16</p>
+	<p>line17</p>
+	<article>
+		<section>s1</section>
+		<section class="s1">s2</section>
+		<section>s3</section>
+	</article>
+	<p>line18</p>
+	<p>line19</p>
+	<p>line20</p>
+	<p>line21</p>
+	<p>line22</p>
+	<p>line23</p>
+	<p>line24</p>
+	<p>line25</p>
+	<p>line26</p>
+	<p>line27</p>
+	<p>line28</p>
+	<p>line29</p>
+	<p>line30</p>
+	
+</body>
+</html>
