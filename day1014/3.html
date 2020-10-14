@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS3新增样式-1</title>
+	<style>
+		h3{text-shadow: 5px 5px 5px gray,-5px -5px 3px red;}
+		.d1{width: 150px;border:1px solid red;
+			white-space: nowrap;overflow: hidden;
+			text-overflow: ellipsis;}
+		.d2,.d3,.d4,.d5,.d6,.d7{width: 200px;border: 1px solid red;	}
+		.d3{word-break: break-all;}
+		.d4{word-wrap: break-word;}
+		.d5{border-radius: 5px;padding: 5px;}
+		.d6{border-radius: 5px 10px 15px 20px;}
+		img{border-radius: 50%; width:110px;}
+		.d7{border-image: url(imgs/border.png) 26/26px round;
+			padding: 26px}
+	</style>
+</head>
+<body>
+	<h3>HTML</h3>
+	<div class="d1">this is html ,this is html.</div>
+	<div class="d2">sjh asdkaks djksalkjasdkl   ksajd j daskjd asd ksdkasd dsad jkj kdjakd askd</div>
+	<div class="d3">sjh asdkaks djksalkjasdkl   ksajd j daskjd asd ksdkasd dsad jkj kdjakd askd</div>
+	<div class="d4">sjh asdkaks djksalkjasdkl   ksajd j daskjd asd ksdkasd http://www.baidu.com/path/sub/sub/sub/index.html#abcc</div>
+	<hr>
+	<div class="d5">sjh asdkaks djksalkjasdkl   ksajd j daskjd asd ksdkasd dsad jkj kdjakd askd</div>
+	<hr>
+	<div class="d6">sjh asdkaks djksalkjasdkl   ksajd j daskjd asd ksdkasd dsad jkj kdjakd askd</div>
+	<hr>
+	<img src="imgs/small.png" >
+	<hr>
+	<div class="d7">sjh asdkaks djksalkjasdkl   ksajd j daskjd asd ksdkasd dsad jkj kdjakd askd</div>
+</body>
+</html>

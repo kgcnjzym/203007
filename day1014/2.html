@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS3新增选择器-2</title>
+	<style>
+		input{outline: none}
+		input:focus{
+			border: 1px solid red;
+		}
+		input:read-only{
+			border: 1px solid lightgray;
+		}
+		textarea::selection{background-color: yellow}
+		input[type=password]{font-size: 2rem}
+		input[type*=s]{font-size: 2rem}
+		div + h1{color:red;}
+		div + h2{color:blue;}
+		:target{color:red;}
+	</style>
+</head>
+<body>
+	<input type="text" ><br>
+	<input type="text" ><br>
+	<input type="text" readonly value="sdfsdsdfs"><br>
+	<textarea cols="30" rows="10"></textarea>
+	<input type="password" >
+	<input type="submit" value="submit">
+	<input type="reset" value="reset">
+	<hr>
+	<div id="d1">first</div>
+	<h1>second</h1>
+	<div id="d2">other div</div>
+	<h2>third</h2>
+	<h2>fourth</h2>
+	<hr>
+	<a href="#d1">Link 1</a>
+	<a href="#d2">Link 2</a>
+</body>
+</html>
