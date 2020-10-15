@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base target="_blank">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS3新增样式</title>
+	<style type="text/css" media="screen">
+		textarea{
+			resize: none;
+		}
+		div{
+			width: 200px; height:100px;
+			border: 1px solid #000;
+		}
+		.d1{
+			box-shadow: 5px 5px 3px 2px gray inset;
+		}
+		.d2{
+			transform: translate(100px, 0px);
+		}
+		.d3{
+			transform: scale(0.5, 0.5);
+		}
+		.d4{
+			transform: rotate(30deg);
+			transform-origin: top left;
+		}
+		.d5{
+			transform: skewY(30deg);
+		}
+		.d6{
+			transform-style: preserve-3d;
+			perspective: 1000px;			
+			width: 427px; height:528px;
+		}
+		.d6 img{
+			transform: rotateY(30deg);
+			transform-origin: left;
+			/* perspective-origin: bottom; */
+			backface-visibility: hidden;
+
+		}
+	</style>
+</head>
+<body>
+	<textarea name="" cols="30" rows="10"></textarea>
+	<hr>
+	<div class="d1"></div>
+	<hr>
+	<div class="d2"></div>
+	<hr>
+	<div class="d3"></div>
+	<hr>
+	<div class="d4"></div>
+	<hr>
+	<div class="d5"></div>
+	<hr>
+	<div class="d6">
+		<img src="../day1014/imgs/book.jpg" alt="">
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

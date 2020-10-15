@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    color: blue;
+}
+
+.left {
+    float: left;
+}
+
+/* wrap */
+.wrap {
+    width: 990px;
+    margin: 0 auto;
+}
+
+/* logo-box */
+.logo-r {
+    font-size: 24px;
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    margin-left: 20px;
+    color: gray;
+}
+
+.logo-box::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* content */
+.content {
+    width: 100%;
+    background-color: #e93854;
+}
+
+.content .wrap {
+    background: url('../imgs/banner.png');
+    height: 475px;
+}
+
+/* login-box */
+.login-box {
+    float: right;
+    background-color: #fff;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.login-form h2 {
+    font-weight: lighter;
+    color: gray;
+}
+
+.login-form h2 a {
+    float: right;
+    color: #e93854;
+    font-size: 14px;
+    line-height: 32px;
+}
+
+.login-form h2 a::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url('../imgs/login-icons.png') -103px -75px;
+    position: relative;
+    top: 5px;
+}
+
+/* 38+2 +1 300-40-1=259*38 */
+.item,
+.item2 {
+    margin-top: 20px;
+}
+
+.nick {
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    border: 1px solid gray;
+    background: url('../imgs/login-icons.png');
+}
+
+.item input {
+    box-sizing: border-box;
+    width: 260px;
+    height: 40px;
+    border: 1px solid gray;
+    border-left: none;
+    padding: 0 10px;
+    outline: none
+}
+
+.psw {
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    border: 1px solid gray;
+    background: url('../imgs/login-icons.png') -48px 0;
+}
+
+.item2 label {
+    font-size: 12px;
+    color: gray;
+}
+
+.item2 a {
+    float: right;
+    font-size: 12px;
+    color: gray;
+}
+
+a.login-btn {
+    margin-top: 20px;
+    display: inline-block;
+    width: 300px;
+    height: 40px;
+    background-color: #e93854;
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 10px;
+    text-align: center;
+    line-height: 40px;
+}
+
+/* footer */
+.footer{
+	text-align: center;
+}
+.footer a{
+	font-size: 12px ;
+	color: gray;
+	padding: 5px;
+}
+.footer .link{
+	font-size: 12px ;
+	color: gray;
+
+}

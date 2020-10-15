@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_blank">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>媒体查询</title>
+    <style type="text/css">
+    div {
+        width: 600px;
+        height: 400px;
+        border: 1px solid red;
+        font-size: 40px;
+        color: red;
+    }
+
+    @media print {
+        .t1 {
+            display: none;
+        }
+    }
+
+    @media (max-width: 500px) {
+        div {
+            font-size: 24px;
+            color: blue;
+        }
+    }
+
+    @media (max-width: 400px) {
+        div {
+            font-size: 16px;
+            color: green;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div>dfsdsdfsdfsdf</div>
+    <div class="t1">
+    </div>
+</body>
+
+</html>

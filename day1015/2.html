@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base target="_blank">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS3过渡</title>
+	<style type="text/css" media="screen">
+		
+		div{
+			border: 1px solid #000;
+		}
+		
+		.d6{
+			margin: 10px auto;	
+			width: 600px; height:528px;
+		}
+		.d6 img{
+			transition: transform 2s cubic-bezier(0.6,-0.49, 0.35, 1.44);
+		}
+		.d6 img:hover{
+			transform: rotate(90deg);
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="d6">
+		<img src="../day1014/imgs/book.jpg" alt="">
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

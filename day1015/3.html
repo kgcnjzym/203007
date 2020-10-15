@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base target="_blank">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS3动画</title>
+	<style type="text/css" media="screen">		
+		div{
+			border: 1px solid #000;
+		}		
+		.d6{
+			margin: 10px auto;	
+			width: 600px; height:528px;
+			transform-style: preserve-3d;
+			perspective: 1000px;
+		}
+		.d6 img{
+			transform: translateZ(-9000px); 
+			animation: move 2s cubic-bezier(0, 0.56, 1, 1) 0s 1 forwards;
+		}
+		@keyframes move{
+			to{
+				transform: translateZ(0px); 
+			}
+		}
+		
+	</style>
+</head>
+<body>
+	
+	<div class="d6">
+		<img src="../day1014/imgs/book.jpg" alt="">
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
