@@ -1,0 +1,43 @@
+article{
+	width: 600px;height: 400px;
+	margin: 30px auto;
+	background-color: skyblue;
+	position: relative;
+}
+
+section{
+	width: 300px;height: 40px;
+	background-image: linear-gradient(to left,rgba(255,255,0,0.1),rgba(255,255,0,0.9),rgba(255,255,0,0.1));
+	position: absolute;
+	top: 180px;
+	left: 150px;
+	transform : rotate(0deg);
+	animation: rot 4s linear infinite;
+}
+section::before{
+	content: "";
+	display: block;
+	width: 300px;height: 40px;
+	background-image: linear-gradient(to left,rgba(255,255,0,0.1),rgba(255,255,0,0.9),rgba(255,255,0,0.1));
+	transform:rotate(90deg);	
+	position: absolute;
+}
+
+section::after{
+	content: "";
+	display: block;
+	width: 220px;
+	height: 220px;
+	background-color: yellow;
+	box-shadow: 0 0 5px 20px rgba(255,255,0,0.4);
+	border-radius: 50%;
+	position: absolute;
+	left: 40px;
+	top: -90px;
+}
+
+@keyframes rot{
+	to{
+		transform : rotate(360deg);
+	}
+}
