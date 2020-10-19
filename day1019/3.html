@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>编解码函数</title>
+	<script>
+		let s='he=llo 欢迎%';
+		let en=encodeURI(s);
+		console.log('encodeURI:'+en);
+		let de=decodeURI(en);
+		console.log('decodeURI:'+de);
+
+		let es=escape(s);
+		console.log('escape:'+es);
+		let ue=unescape(es);
+		console.log('unescape:'+ue);
+
+
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

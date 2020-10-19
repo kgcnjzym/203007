@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>自定义函数3</title>
+	<script>
+		var test;
+		var test1;
+		test="hello";
+		test=function(){
+			console.log('test');
+		};
+		console.log(typeof test);
+		test1=new Function("console.log('test1')");
+
+		let n=100;
+		function test2(){
+			n=99;
+			console.log('in test2:n='+n);
+		}
+		function test3(){
+			console.log('in test3:n='+n);
+			console.log('in test3:x='+x);
+			let x=1;
+			console.log('in test3:x='+x);
+		}
+
+	</script>
+</head>
+<body>
+	<button onclick="test()">test</button>
+	<button onclick="test2()">test2</button>
+	<button onclick="test3()">test3</button>
+	<a href="javascript:test1()">test1</a>
+</body>
+</html>

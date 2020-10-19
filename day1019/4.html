@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>自定义函数1</title>
+	<script>
+		var test;
+
+		function test(){
+			console.log('this is test');
+		}
+		function test1(a){
+			console.log('this is test1,a='+a);
+		}
+		// 无重载，后定义的覆盖先定义的
+		function test(a,b){
+			console.log('this is test,a='+a+",b="+b);
+		}
+		test="hello";
+		console.log(typeof test);
+	</script>
+</head>
+<body>
+	<button onclick="test()">test</button>
+	<a href="javascript:test1(10,20)">test1</a>
+</body>
+</html>

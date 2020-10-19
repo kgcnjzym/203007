@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>函数回调和调用</title>
+	<script>	
+		//函数定义	
+		function test1(){
+			console.log('1.this is test1');
+		}
+		function test2(){
+			console.log('2.this is test2');
+			return test1;
+		}
+		//函数调用call
+		test1();
+		//函数回调：绑定事件
+		onload=test2;
+		//函数回调：作为参数
+		function test3(a,b,oper){
+			// console.log(oper);
+			// return a;
+			return oper(a,b);
+		}
+
+		function test4(){
+			// let rt=test3(10,20,function(a,b){return a*b;});
+			let rt=test3(10,20,(a,b)=>a*b);
+			console.log('rt='+rt);
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		console.log('3.js in body');
+	</script>
+	<button onclick="test4()">test4</button>
+</body>
+</html>

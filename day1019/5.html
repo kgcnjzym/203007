@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>自定义函数2</title>
+	<script>
+		// function getMax(a,b,c){
+		// 	let m=a>b?a:b;
+		// 	if(c == undefined){
+		// 		return m;
+		// 	}
+		// 	return m>c?m:c;
+		// }
+
+		//JS使用内置对象arguments表示变长参数
+		function getMax(){
+			if(arguments.length==0){
+				return ;
+			}
+			let m=arguments[0];
+			for(let i=1;i<arguments.length;i++){
+				m=m<arguments[i]?arguments[i]:m;
+			}
+			return m;
+		}
+
+		function test(){
+			let a=prompt('pls input:')*1;
+			let b=prompt('pls input:')*1;
+			console.log(getMax(a,b));
+		}
+		function test1(){
+			let a=prompt('pls input:')*1;
+			let b=prompt('pls input:')*1;
+			let c=prompt('pls input:')*1;
+			console.log(getMax(a,b,c));
+		}
+		console.log(getMax());
+		console.log(getMax(45,78,23,4,12,9));
+	</script>
+</head>
+<body>
+	<button onclick="test()">test</button>
+	<a href="javascript:test1()">test1</a>
+</body>
+</html>
