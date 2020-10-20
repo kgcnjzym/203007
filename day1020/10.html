@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>String方法2</title>
+	<script type="text/javascript">
+		let str="mike,andy,jerry,tom";
+		let arr=str.split(',');
+		console.log(arr.length);
+		console.log(arr);
+		arr=str.split(',',3);
+		console.log(arr);
+		console.log("===========");
+		let s=String.fromCharCode(65,97,0x4e00);
+		console.log(s);//Aa一
+		console.log("===========");
+		let bd='百度';
+		let link=bd.link("http://www.baidu.com");
+		// console.log(link);
+		document.write(link);
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

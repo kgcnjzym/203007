@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>数组创建1</title>
+	<script type="text/javascript">
+		let arr1=Array();
+		console.log(arr1.length);
+		let arr2=new Array(5);
+		console.log(arr2.length);
+		arr2[0]=100;
+		arr2[4]=400;
+		console.log(arr2);
+		console.log(arr2[1]);
+		arr2[6]=900;
+		console.log(arr2.length);
+		console.log(arr2);
+		console.log("===========");
+		let arr3=new Array('andy','mike','jerry');
+		console.log(arr3);
+		let arr4=["aaa","dddd","deee"];
+		console.log(arr4);
+		// let arr5=new Array(-10);
+		console.log("===========");
+		arr2.length=3;
+		console.log(arr2.length);
+		console.log(arr2);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

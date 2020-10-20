@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>数组遍历</title>
+	<script type="text/javascript">
+		let arr=[];
+		arr[0]='hello';
+		arr[1]=100;
+		arr[2]=true;
+		arr[5]=10;
+		arr["name"]="mike";
+		arr["age"]=20;
+		for(let i=0;i<arr.length;i++){
+			console.log(arr[i]);
+		}
+		console.log("=======");
+		for(let i in arr){
+			console.log(arr[i]);
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
