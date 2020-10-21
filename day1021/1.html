@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Date的使用</title>
+	<script type="text/javascript">
+		let d1=new Date(2020,9,21);
+		console.log(d1);//2020-10-21
+		let d2=new Date(2020,9,32);
+		console.log(d2);//2020-11-1
+		//获取某年某月有多少天
+		let year=prompt('pls input year:')*1;
+		let month=prompt('pls input month:')*1;
+		// let d=new Date(year,month-1,31);
+		// let days=d.getDate();//31,1,2,3
+		// if(days!=31){
+		// 	days=31-days;
+		// }
+		let d=new Date(year,month,0);
+		let days=d.getDate();
+		console.log(days);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

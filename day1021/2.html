@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON语法</title>
+    <script type="text/javascript">
+    //JSON的JS语法
+    let user = {
+        name: 'mike',
+        'first-name':'jerry',
+        age: 20,
+        gender: 'M',
+        say: function() { 
+        		console.log('hi,i am ' + this.name);
+        	 }
+    };
+    console.log(typeof user);
+    // alert(user);
+    console.log(user.name, user.age,user['first-name']);
+    user.say();
+    user['say']();
+
+    //JSON的规范语法
+    let str="{\"name\":\"tom\",\"age\":20,\"married\":false}";
+    let obj1=eval("("+str+")");
+    let obj2=JSON.parse(str);
+    console.log(obj1);
+    console.log(obj2);
+    let s=JSON.stringify(user);
+    console.log(s);
+    //对象克隆
+    let u2=JSON.parse(s);
+    console.log(u2);
+    //JSON对象数组
+    let arr=[{name:'mike'},{name:'jerry'},{name:'andy'}];
+    // console.log(arr[0].name);
+    arr.forEach((u)=>console.log(u.name));
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

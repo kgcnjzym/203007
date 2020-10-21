@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原型</title>
+    <script type="text/javascript">
+    	function User(name,age){
+    		this.name=name==undefined?"nobody":name;
+    		this.age=age==undefined?18:age;
+    		this.say=function(){
+    			console.log("hi, i am "+this.name+",age is "+this.age);
+    		};
+    	}
+
+		// User.prototype.gender='M';
+
+    	let u1=new User('mike',20);
+    	u1.say();
+    	u1.gender="M";
+    	let u2=new User('andy',21);
+    	u2.say();
+    	u2.gender="F";
+    	console.log(u1.gender,u2.gender);
+
+    	User.prototype.run=function(){
+    		console.log(this.name+" is running.");
+    	}
+    	u1.run();
+
+    	//给String扩展
+    	String.prototype.test=function(){
+    		return this.toUpperCase();
+    	}
+    	String.prototype.trimAll=function(){
+    		let temp=this.trim();
+    		let arr=temp.split(' ');
+    		return arr.join('');
+    	}
+    	let str="hello world";
+    	console.log(str.test());
+    	str="   aaa   bbb    ";
+    	console.log("["+str.trim()+"]");
+    	console.log("["+str.trimAll()+"]");
+    	console.log("["+str+"]");
+    	
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

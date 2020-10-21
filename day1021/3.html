@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模拟类</title>
+    <script type="text/javascript">
+    	function User(name,age){
+    		this.name=name==undefined?"nobody":name;
+    		this.age=age==undefined?18:age;
+    		this.say=function(){
+    			console.log("hi, i am "+this.name+",age is "+this.age);
+    		};
+    	}
+
+    	let u1=new User('mike',20);
+    	let u2=new User();
+    	u1.say();
+    	u2.say();
+    	
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

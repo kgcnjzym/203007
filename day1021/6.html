@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定时器</title>
+    <script type="text/javascript">
+        let timer;
+    	function doStartTime(){
+            setTimeout(function(){
+                console.log('this is timeout');
+            }, 2000);
+        }
+        //方式1：定时器特有
+        // function doStartInterval(){
+        //     timer=setInterval(run, 2000,'world');
+        // }
+        //方式2：事件绑定方式
+        // function doStartInterval(){
+        //     timer=setInterval("run('hello')", 2000);
+        // }
+        //方式3：匿名函数包裹函数调用
+        function doStartInterval(){
+            timer=setInterval(function(){
+                run('javascript');
+            }, 2000);
+        }
+        function run(a){
+            console.log('this is interval:'+a);
+        }
+        function doStop(){
+            clearTimeout(timer);
+        }
+    </script>
+</head>
+
+<body>
+	<button onclick="doStartTime()">start time</button>
+	<button onclick="doStartInterval()">start inter</button>
+    <button onclick="doStop()">stop</button>
+</body>
+
+</html>
