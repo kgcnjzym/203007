@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>1021课后练习4</title>
+	<script type="text/javascript">
+		let pokers=[];
+		for(let i=1;i<=52;i++){
+			pokers.push(i);
+		}
+		//洗牌
+		pokers.sort(()=>Math.random()-0.5);
+		//创建4个玩家
+		let players=[];
+		for(let i=0;i<4;i++){
+			players.push([]);
+		}
+		//发牌：0->0 1->1 2->2 3->3 4->0 5->1
+		for(let i=0;i<52;i++){
+			players[i%4].push(pokers[i]);
+		}
+		//理排
+		for(let i=0;i<4;i++){
+			players[i].sort((a,b)=>a-b);
+		}
+		//根据牌号获取名称
+		function getName(no){
+			let types=['黑桃','红心','梅花','方片'];
+			let pno=['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+			no=no-1;//26
+			tindex=parseInt(no/13);//2
+			pindex=no%13;//0
+			return types[tindex]+pno[pindex];
+		}
+		console.log(players);
+		//输出
+		for(let i=0;i<4;i++){
+			console.log('玩家'+(i+1)+'的牌是：');
+			let s="";
+			for(let j=0;j<13;j++){
+				s+=getName(players[i][j])+" ";
+			}
+			console.log(s);
+		}
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

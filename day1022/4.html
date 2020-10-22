@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>元素操作</title>
+	<script type="text/javascript">
+		let rdos;
+		let img;
+		let btn;
+		let frm;
+		onload=function(){
+			frm=document.getElementsByTagName("form")[0];
+			img=frm.getElementsByTagName("img")[0];
+			btn=document.getElementsByTagName("button")[0];
+			btn.className="btn";//特殊：class使用className
+			rdos=document.getElementsByName("engine");
+			for(let i=0;i<rdos.length;i++){
+				rdos[i].onchange=doChange;
+			}
+			frm.getElementsByTagName("label")[0].htmlFor="rdobd";//特殊：for使用htmlFor
+		};
+
+		function doChange(){
+			if(rdos[0].checked){
+				img.src="imgs/baidu.jpg";
+				btn.innerHTML="百度搜索";
+				frm.action="https://www.baidu.com/s";
+				t1.name="wd";
+			}
+			else{
+				img.src="imgs/360.jpg";
+				btn.innerHTML="360搜索";
+				frm.action="https://www.so.com/s";
+				t1.name="q";
+			}
+		}
+	</script>	
+	<style>
+		.btn{
+			width: 200px;height: 40px;
+			background-color: cyan;
+			border: 1px skyble outset;
+			outline: none;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<img src="../day1015/imgs/banner.png">
+
+	<form target="_blank" action="https://www.baidu.com/s">
+		<img src="imgs/baidu.jpg" width="200" height="40">
+		<br>
+		<input type="radio" name="engine" id="rdobd" checked>
+		<label>百度</label>
+		<input type="radio" name="engine" id="rdo360">
+		<label for="rdo360">360</label>
+		<br>
+		<input name="wd" id="t1">
+		<button>百度搜索</button>
+	</form>
+
+
+</body>
+</html>

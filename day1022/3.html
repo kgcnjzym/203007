@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>查找元素</title>
+	<script type="text/javascript">
+		function getId(){
+			let obj=document.getElementById("p1");
+			console.log(obj);
+		}
+		function getName(){
+			let objs=document.getElementsByName("p2");
+			console.log(objs);
+		}
+		function getTag(){
+			let objs=document.getElementsByTagName("p");
+			console.log(objs);
+		}
+		function getClass(){
+			let objs=document.getElementsByClassName("c1");
+			console.log(objs);
+		}
+	</script>
+	<style>
+		#p1{color:red;}
+		.c1{color:blue;}
+	</style>
+</head>
+<body>
+	<button onclick='getId()'>id</button>
+	<button onclick='getName()'>name</button>
+	<button onclick='getTag()'>tag</button>
+	<button onclick='getClass()'>class</button>
+	<hr>
+	<p name="p2">line1</p>
+	<p id="p1">line2</p>
+	<p name="p2">line3</p>
+	<p id="p1">line4</p>
+	<p name="p2">line5</p>
+	<h2 class="c1">this is h2</h2>
+	<h3 class="c1">this is h3</h3>
+	<h4 class="c1">this is h4</h4>
+</body>
+</html>

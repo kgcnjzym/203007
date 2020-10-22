@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>样式操作</title>
+	<script type="text/javascript">
+		onload=function(){
+			let d=document.getElementsByTagName("div")[0];
+			d.style.border="1px solid red";
+			d.style.width="200px";
+			d.style.height="50px";
+			d.onmouseover=function(){
+				d.style.borderColor="blue";
+			};
+			d.onmouseout=function(){
+				d.style.borderColor="red";
+			};
+		};
+	</script>	
+	
+</head>
+<body>
+	<div>dfsf</div>
+
+
+</body>
+</html>

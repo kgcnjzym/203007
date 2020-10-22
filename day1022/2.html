@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>history和location</title>
+	<script type="text/javascript">
+		function doBack(){
+			history.back();
+		}
+		function doForward(){
+			history.forward();
+		}
+		function doHref(){
+			// console.log(location.href);
+			// console.log(typeof location.href);
+			location.href="http://www.baidu.com";
+			// location.assign("http://www.baidu.com");
+			// console.log(location);
+		}
+		function doReload(){
+			location.reload();//F5
+		}
+		function doReplace(){
+			location.replace("http://www.baidu.com");
+		}
+		onload=function(){
+			console.log(new Date());
+		}
+	</script>
+</head>
+<body>
+	<button onclick='doBack()'>back</button>
+	<button onclick='doForward()'>forward</button>
+	<button onclick='doHref()'>href</button>
+	<button onclick='doReload()'>F5</button>
+	<button onclick='doReplace()'>replace</button>
+</body>
+</html>
