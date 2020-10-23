@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Option级联</title>
+	<script type="text/javascript">
+		onload=function(){
+			let provs=['江苏','安徽','浙江'];
+			let citys=[ ['南京','无锡','苏州','常州'],
+						['合肥','芜湖','安庆'],
+						['杭州','温州']
+					  ];
+			for(let i=0;i<provs.length;i++){
+				let opt=new Option(provs[i],i);
+				selP.add(opt);
+				// let opt=document.createElement("option");
+				// opt.appendChild(document.createTextNode(provs[i]));
+				// selP.appendChild(opt);
+			}
+			selP.onchange=function(){
+				selC.length=1;
+				let index=this.value;
+				if(index==-1){
+					return;
+				}
+				let cts=citys[index];
+				for(let i=0;i<cts.length;i++){
+					let opt=new Option(cts[i],i);
+					selC.add(opt);
+				}
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<select id="selP">
+		<option value="-1">==请选择省==</option>
+	</select>
+	<select id="selC">
+		<option value="-1">==请选择市==</option>
+	</select>
+</body>
+</html>

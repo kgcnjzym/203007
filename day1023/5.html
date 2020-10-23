@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>正则示例2</title>
+	<script type="text/javascript">
+		// let s=prompt('pls input:');	//a1b23cc456dd	
+		// let re=/\d+/g;
+		let rt;
+		// do{
+		// 	rt=re.exec(s);
+		// 	console.log(rt);
+		// 	console.log(re.lastIndex);
+		// }while(rt!=null);
+		// console.log('========');
+		// re1=/\d+/;
+		// rt=s.search(re1);
+		// console.log(rt);
+		// rt=s.match(re)
+		// console.log(rt);
+		// console.log('========');
+		let str='andy,mike;jerry.tom';
+		rt=str.replace(/[,;.]/g,':');
+		console.log(rt);
+		let arr=str.split(/[,.;]/);
+		console.log(arr);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

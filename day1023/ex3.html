@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1022课后练习3</title>
+    <script type="text/javascript">
+    	onload=function(){
+    		let btn=document.getElementsByTagName("button")[0];
+    		btn.onclick=function(){
+    			let a=first.value;
+    			let b=second.value;
+    			if(isNaN(a) || isNaN(b)){
+    				alert('操作数不合法');
+    				return;
+    			}
+    			let rdos=document.getElementsByName("ysf");
+    			let op="";
+    			for(let i=0;i<rdos.length;i++){
+    				if(rdos[i].checked){
+    					op=rdos[i].value;
+    				}
+    			}
+    			if(op==""){
+    				alert('请选择运算符');
+    				return;
+    			}
+    			result.innerHTML=eval(a+op+b);
+    		};
+    	}
+    </script>
+</head>
+
+<body>
+    <label for="first">操作数A</label>
+    <input type="text" id="first">
+    <br><br>
+    <label for="second">操作数B</label>
+    <input type="text" id="second">
+    <br><br>
+    <label>运算符:</label>
+    <input type="radio" name="ysf" value="+" id="jia">
+    <label for="jia">加</label>
+    <input type="radio" name="ysf" value="-" id="jian">
+    <label for="jian">减</label>
+    <input type="radio" name="ysf" value="*" id="cheng">
+    <label for="cheng">乘</label>
+    <input type="radio" name="ysf" value="/" id="chu">
+    <label for="chu">除</label>
+    <br><br>
+    <button>计算</button>
+    <h1 >结果是:<span id="result"></span></h1>
+</body>
+
+</html>

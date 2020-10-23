@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DOM写操作</title>
+	<script type="text/javascript">
+		onload=function(){
+			let btn=document.getElementsByTagName("button")[0];
+			let d=document.getElementsByTagName("div")[0];
+			btn.onclick=function(){
+				//1.创建元素
+				let elm=document.createElement("p");
+				//2.设置元素相关属性、样式等
+				// elm.innerHTML="新增<b>标签";
+				// elm.className="aaa";
+				let txt=document.createTextNode("新增<b>标签");
+				elm.appendChild(txt);
+				elm.setAttribute("class","aaa");
+				//3.添加：通过父元素
+				d.appendChild(elm);
+			};
+		}
+	</script>
+</head>
+<body>
+	<button>add</button>
+	<div></div>
+</body>
+</html>
