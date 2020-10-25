@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery常用函数</title>
+	<script type="text/javascript" src="jquery/jquery-1.11.0.min.js"></script>	
+	<script type="text/javascript">
+		//DOM
+		// onload=function(){
+		// 	let ps=document.getElementsByTagName("p");
+		// 	for(let i=0;i<ps.length;i++){
+		// 		console.log(ps[i].innerHTML);
+		// 	}
+		// }
+		//jQuery
+		$(function(){
+			$("p").each(function(i,obj){
+				// console.log(this.innerHTML);
+				// console.log($(this).html());
+				console.log(i,obj.innerHTML);
+			});
+			$('.b1').click(function(){
+				console.log($('p'));
+				let ps=$("p").get();
+				console.log(ps);
+			});
+
+			$('.b2').click(function(){
+				let ps=$('p');
+				// let p1=$('#p1')
+				console.log(ps.index(p1));
+			});
+		});
+	</script>
+
+	
+</head>
+<body>
+	<p>line1</p>
+	<p>line2</p>
+	<p id="p1">line3</p>
+	<p>line4</p>
+	<p>line5</p>
+
+	<button class="b1">test1</button>
+	<button class="b2">test2</button>
+	
+</body>
+</html>

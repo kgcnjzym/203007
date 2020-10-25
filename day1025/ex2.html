@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>练习2</title>
+	<script type="text/javascript">
+	onload=function(){			
+		function addOpt(sel,start,end,suffix){
+			for(let i=start;i<end;i++){
+				let opt=new Option(i+suffix,i);
+				sel.add(opt);			
+			}
+		}
+
+		function changeDate(y,m){
+			selD.length=28;
+			let d=new Date(y,m,0);
+			let days=d.getDate();
+			addOpt(selD,29,days+1,'');
+		}
+
+		selY.onchange=function(){
+			let y=this.value;
+			let m=selM.value;
+			changeDate(y,m);
+		}
+		selM.onchange=function(){
+			let y=selY.value;
+			let m=this.value;
+			changeDate(y,m);
+		}
+
+		addOpt(selY,1900,2100,'年');
+		addOpt(selM,1,13,'月');
+		addOpt(selD,1,32,'');
+		let now=new Date();
+		changeDate(now.getFullYear(),now.getMonth()+1);
+		selY.value=now.getFullYear();
+		selM.value=now.getMonth()+1;
+		selD.value=now.getDate();
+	}
+	</script>
+</head>
+<body>
+	<select id="selY">		
+	</select>
+	<select id="selM">
+	</select>
+	<select id="selD">
+	</select>
+</body>
+</html>

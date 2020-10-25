@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery选择器2</title>
+	<script type="text/javascript" src="jquery/jquery-1.11.0.min.js"></script>	
+	<script type="text/javascript">
+		$(function(){
+			console.log($(':input').length);
+			console.log($(':text').length);
+			console.log($('[type=email]').length);
+			$('[type=button]').on("click",function(){
+				let g=$(':radio:checked').val();
+				console.log(g);
+				$(':text').val(g);
+				// console.log($('label:eq(0)').html());
+				// $('label:eq(0)').html('姓名：');
+				// console.log($('label').html());
+				// $('label').html('姓名：');
+				// $('label:eq(0)').attr('for','t1').html('姓名：').attr('aaa','ccc');
+				// $('label:eq(0)').html('<i>姓名：</i>');
+				$('label:eq(0)').text('<i>姓名：</i>');
+			});
+		});
+	</script>	
+</head>
+<body>
+	<form action="">
+		<p>
+			<label>Name:</label>
+			<input type="text">
+		</p>
+		<p>
+			<label>Pass:</label>
+			<input type="password">
+		</p>
+		<p>
+			<label>Email:</label>
+			<input type="email">
+		</p>
+		<p>
+			<label>Gender:</label>
+			<input type="radio" name="gender" value="M">Male
+			<input type="radio" name="gender" value="F">Female
+		</p>
+		<p>
+			<button>提交</button>
+			<button type="reset">重置</button>
+			<button type="button">test</button>
+		</p>
+	</form>	
+</body>
+</html>

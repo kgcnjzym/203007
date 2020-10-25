@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery选择器1</title>
+	<script type="text/javascript" src="jquery/jquery-1.11.0.min.js"></script>	
+	<script type="text/javascript">
+		$(function(){
+			// $("thead").css("background-color",'blue').css("color",'yellow').css('font-size','24px');
+			$("thead").css({
+				"background-color":'blue',
+				color:'yellow',
+				fontSize:'32px'
+			});// .css("color",'yellow').css('font-size','24px');
+
+			// $("td:first").css('color','blue');
+			// $("td:first-child").css('color','blue');
+			// $("tbody > tr:even").css('background-color','skyblue');
+			// $("tbody > tr:gt(0)").css('background-color','skyblue');
+			// $("tbody > tr:nth-child(3n+1)").css('background-color','skyblue');
+			$("td:not([align*=e])").css('color','blue');
+		})
+	</script>	
+</head>
+<body>
+	<table width="600">
+		<thead>
+			<tr>
+				<th>TH1</th>
+				<th>TH2</th>
+				<th>TH3</th>
+				<th>TH4</th>
+				<th>TH5</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>TD11</td>
+				<td align="center">CEN</td>
+				<td>TD13</td>
+				<td>TD14</td>
+				<td align="right">RGT</td>
+			</tr>
+			<tr>
+				<td align="right">RGT</td>
+				<td>TD22</td>
+				<td align="center">CEN</td>
+				<td>TD24</td>
+				<td align="left">LFT</td>
+			</tr>
+			<tr>
+				<td>TD31</td>
+				<td align="right">RGT</td>
+				<td align="center">CEN</td>
+				<td>TD34</td>
+				<td align="left">LFT</td>
+			</tr>
+			<tr>
+				<td>TD41</td>
+				<td align="right">RGT</td>
+				<td align="left">LFT</td>
+				<td>TD44</td>
+				<td align="center">CEN</td>
+			</tr>
+			<tr>
+				<td>TD41</td>
+				<td>TD42</td>
+				<td align="right">RGT</td>
+				<td>TD44</td>
+				<td>TD45</td>
+			</tr>
+			<tr>
+				<td>TD41</td>
+				<td align="left">LFT</td>
+				<td>TD43</td>
+				<td>TD44</td>
+				<td>TD45</td>
+			</tr>
+			<tr>
+				<td align="left">LFT</td>
+				<td>TD42</td>
+				<td>TD43</td>
+				<td>TD44</td>
+				<td>TD45</td>
+			</tr>
+			<tr>
+				<td>TD41</td>
+				<td>TD42</td>
+				<td>TD43</td>
+				<td>TD44</td>
+				<td>TD45</td>
+			</tr>
+		</tbody>	
+	</table>	
+</body>
+</html>
