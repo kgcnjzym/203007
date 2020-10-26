@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>综合示例</title>
+	<script type="text/javascript" src="../day1025/jquery/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/demo.js"></script>
+	<style type="text/css">
+		.container{
+			width: 400px;margin: 30px auto;
+		}
+		.container table{width: 100%;}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<table border="1">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Age</th>
+					<th>Gender</th>
+					<th>Email</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+	<div class="container">
+		<form action="">
+			<p>pls input info:</p>
+			<p>
+				<label>Name:</label>
+				<input type="text" name="name">
+	        </p>
+	        <p>
+				<label>Age:</label>
+				<input type="text" name="age">
+	        </p>
+	        <p>
+				<label>Gender:</label>
+				<input type="radio" name="gender" value="Male" checked>Male
+				<input type="radio" name="gender" value="Female">Female
+	        </p>
+	        <p>
+				<label>Email:</label>
+				<input type="text" name="email">
+	        </p>
+	        <p>
+				<button type="button">Add</button>
+				<button type="reset">Reset</button>
+	        </p>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery效果</title>
+    <script type="text/javascript" src="../day1025/jquery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+    	$('.btn1').on('click',function(){
+    		$('.d1').toggle();
+    	});
+    	$('.btn2').on('click',function(){
+    		$('.d2').fadeToggle(2000,function(){
+    			console.log('over');
+    		});
+    	});
+    	$('.btn3').on('click',function(){
+    		$('.d2').slideToggle(2000,function(){
+    			console.log('over');
+    		});
+    	});
+    });
+    </script>
+    <style type="text/css">
+    .d1{width: 200px;height: 40px;border:1px solid red;}	
+    .d2{margin-top:40px;
+    	width: 300px;height: 200px;border:1px solid red;}	
+    </style>
+</head>
+
+<body>
+    <button class="btn1">toggle</button>
+    <button class="btn2">fade</button>
+    <button class="btn3">slide</button>
+    
+    <div class="d1">div</div>
+    <div class="d2">div</div>
+    
+</body>
+
+</html>

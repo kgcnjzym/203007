@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery常用方法</title>
+    <script type="text/javascript" src="../day1025/jquery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('.btn1').on("click", function() {
+            $('[name=chk]').prop('checked', true);
+        });
+        $('.btn2').on("click", function() {
+            $('[name=chk]').prop('checked', false);
+        });
+        $('.btn3').on("click", function() {
+            let p = $("<p>this is p</p>");
+            // p.insertAfter('.d1');
+            $('.d1').after(p);
+        });
+        $('.btn4').on("click", function() {
+            let p = $("<p>this is p</p>");
+            p.prependTo('.d1');
+        });
+        $('.btn5').on("click", function() {
+            let p = $("<p>this is p</p>");
+            // $('.d1').replaceWith(p);
+            p.replaceAll('.d1');
+        });
+        $('.btn6').on("click", function() {
+            $('.d1').remove();
+        });
+        $('.btn7').on("click", function() {
+            $('.d1').empty();
+        });
+        $('.btn8').on("click", function() {
+            $('.d1').append($('.btn1').clone(true));
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <input type="checkbox" name="chk" value="chk1">
+    <input type="checkbox" name="chk" value="chk2">
+    <input type="checkbox" name="chk" value="chk3">
+    <input type="checkbox" name="chk" value="chk4">
+    <input type="checkbox" name="chk" value="chk5">
+    <hr>
+    <button class="btn1">全选</button>
+    <button class="btn2">全不选</button>
+    <button class="btn3">after</button>
+    <button class="btn4">prepend</button>
+    <button class="btn5">replace</button>
+    <button class="btn6">remove</button>
+    <button class="btn7">empty</button>
+    <button class="btn8">clone</button>
+    <hr>
+    <div class="d1">this is d1</div>
+</body>
+
+</html>

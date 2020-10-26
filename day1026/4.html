@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery工具</title>
+    <script type="text/javascript" src="../day1025/jquery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+    	$('button').each(function(i,n){
+    		console.log($(n).text());
+    	});
+    	console.log('=======');
+    	let arr=[1,2,3];
+    	arr[5]=100;
+    	arr['age']=33;
+    	$.each(arr,function(i,n){
+    		console.log(i,n);
+    	});
+    	console.log('=======');
+    	$.each($('button'),function(i,n){
+			console.log($(n).text());
+    	});
+    });
+    </script>
+    
+</head>
+
+<body>
+    <button class="btn1">toggle</button>
+    <button class="btn2">fade</button>
+    <button class="btn3">slide</button>
+    
+    
+    
+</body>
+
+</html>

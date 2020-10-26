@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery事件</title>
+    <script type="text/javascript" src="../day1025/jquery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('.bind').one("click",function(){
+        	$('<button>').text('test2').addClass('btn1').insertAfter('.btn1');
+        });
+        //静态绑定：仅在当前已有元素上绑定
+        $('.btn1').bind('click','sdsad',function(event){
+        	console.log('this is button,event.data='+event.data);
+        });
+        //动态绑定：新增元素符合选择器的会自定绑定事件
+        $('body').on('click','.btn1',function(){
+        	console.log('this is button');
+        });
+        $('.d1').hover(function(){
+        	$(this).css({border:'1px solid red'}).width(200).height(30);
+        	console.log('hover');
+        },function(){
+        	$(this).css({border:'1px solid blue'});
+        	console.log('out');
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <button class="bind">add</button>
+    <hr>
+    <button class="btn1">test1</button>
+    <div class="d1">div</div>
+    
+</body>
+
+</html>

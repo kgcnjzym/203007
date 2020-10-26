@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>测试1</title>
+	<script type="text/javascript">
+		let arr=['Ab10','aB3','AC2','ac16','Abc2'];
+		arr.sort((a,b)=>{
+			let re=/([a-z]+)(\d+)/i;
+			let sa=a.replace(re,'$1').toUpperCase();
+			let na=a.replace(re,'$2');
+			console.log('sa='+sa,'na='+na);
+			let sb=b.replace(re,'$1').toUpperCase();
+			let nb=b.replace(re,'$2');
+			if(sa==sb){
+				return na-nb;
+			}
+			return sa.localeCompare(sb);
+			// return sa[1].localeCompare(sb[1]);
+			// let re=/([a-z]+)(\d+)/i;
+			// let sa=re.exec(a);
+			// let sb=re.exec(b);
+			// console.log(sa);
+			// sa[1]=sa[1].toUpperCase();
+			// sb[1]=sb[1].toUpperCase();
+			// if(sa[1]==sb[1]){
+			// 	return sa[2]-sb[2];
+			// }
+			// return sa[1].localeCompare(sb[1]);
+
+			// let idx=a.search(/\d/);
+			// let stra=a.substring(0,idx);
+			// let numa=a.substring(idx);
+			// idx=b.search(/\d/);
+			// let strb=b.substring(0,idx);
+			// let numb=b.substring(idx);
+			// if(stra.toUpperCase()==strb.toUpperCase()){
+			// 	return numa-numb;
+			// }
+			// return stra.toUpperCase().localeCompare(strb.toUpperCase());
+		});
+		console.log(arr);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
