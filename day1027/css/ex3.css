@@ -1,0 +1,14 @@
+.container {
+    width: 600px;
+    margin: 30px auto;
+}
+
+.container table {
+    width: 100%;
+}
+table th{
+	width: 100px;
+}
+table th:last-child{
+	width: 200px;
+}

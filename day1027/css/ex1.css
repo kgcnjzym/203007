@@ -1,0 +1,48 @@
+*{padding: 0;margin: 0;}
+.container{
+	width: 360px;height: 190px;
+	margin: 30px auto;
+	overflow: hidden;
+	position: relative;
+}
+.img{
+	margin-left: 0px;
+}
+.img img{
+	float: left;
+}
+.img::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.container ul{
+	position: absolute;
+	display: block;
+	width: 360px;
+	height: 30px;
+	list-style: none;
+	text-align: center;
+}
+.container .indicator{
+	bottom: 30px;
+}
+.container .tips{
+	background: rgba(255,255,255,0.8);
+	bottom: 0px;
+}
+.tips li{display: inline-block;line-height: 30px;}
+.indicator li{
+	display: inline-block;
+	width: 24px;height: 24px;
+	line-height: 24px;
+	border-radius: 50%;
+	background: skyblue;
+	color: blue;
+	margin-left:5px;
+	font-size: 12px; 
+}
+.indicator li.curr{
+	background: yellow;
+	color: red;
+}
